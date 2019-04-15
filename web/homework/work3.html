@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>互联网发展的起源</title>
+
+    <style type="text/css">
+        body{
+            margin: 0;
+            background: #ccccff;
+        }
+        p{
+            font-size:12px;
+            text-indent:2em;
+            line-height:1.5;
+            padding:5px;
+        }
+        #h1{
+            color: white;
+            background: blue;
+            text-align:center;
+            padding:15px;
+        }
+        #p1{
+            border-right: 3px red double;
+        }
+        #p2{
+            border-right: 3px orange double;
+        }
+        #img1{
+            float: left;
+            border: 1px #9999cc dashed;
+            margin: 5px;
+            width: 150px;
+            height: 200px;
+        }
+    </style>
+    <script language="javascript" type="text/javascript">
+        var initializationTime=(new Date()).getTime();
+        function showLeftTime()
+        {
+            var now=new Date();
+            var year=now.getYear();
+            var month=now.getMonth();
+            var day=now.getDate();
+            var hours=now.getHours();
+            var minutes=now.getMinutes();
+            var seconds=now.getSeconds();
+            var t;
+            if(hours<12&&hours>6) t="早上好";
+            if(hours<18&&hours>12) t="下午好";
+            if(hours<24&&hours>18) t="晚上好";
+            if(hours<6&&hours>0) t="凌晨好";
+            document.innerHTML=""+(year+1900)+"年"+month+"月"+day+"日 "+hours+"时"+minutes+"分"+seconds+"秒"+
+                "    "+t;
+
+            var timeID=setTimeout(showLeftTime,1000);
+        }
+
+    </script>
+</head>
+<body>
+<h1 id="h1">互联网发展的起源</h1>
+<img id="img1" src="../picture/img01.jpg">
+<p id="p1">1969年，为了保障通信联络，美国国防部高级研究计划署ARPA资助建立了世界上第一个分组交换试验网ARPNET，连接美国四个大学。ARPNET的建成和不断发展标志着计算机网络发展的新纪元。</p>
+<p id="p2">20世纪70年代末到80年代初，计算机网络蓬勃发展，各种各样的计算机网络也应运而生，如MILNET、UYSERNET、BITNET、CSNET等，在网络的规模和数量上都得到很大的发展。一系列网络的建设，产生了不同网络互联的需求，并最终导致了TCP/IP协议的诞生</p>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>学校信息注册提交页面</title>
+    <style type="text/css">
+        #div{
+            width: 600px;
+            height: 200px;
+            margin: 20px 84px;
+            border:2px solid green;
+        }
+    </style>
+
+    <script src="ch02_10_JavaScript.js">
+
+    </script>
+    <script>
+
+        function display(){
+
+            var div = document.getElementById("div");
+            var name = document.getElementById("name");
+            div.innerText = "姓名："+name.value;
+            var sex = document.stu.stuSex;
+
+            div.innerText += " 性别："+sex.value;
+
+            var birthday = document.getElementById("stuBirthday");
+            div.innerText += " 出生日期："+birthday.value;
+            var school =document.getElementById("stuSchool");
+            div.innerText += " 学校："+school.value;
+
+            var major = document.stu.stuSelect2;
+
+            var index = major.selectedIndex;
+            var val = major.options[index1].value;
+
+            div.innerText += " 专业："+val;
+            var sport = document.stu.stuCheck;
+            var s="";
+            for (var i=0;i<sport.length;++i){
+                if(sport[i].checked==true) s=s+sport[i].value;
+            }
+
+            div.innerText += " 体育特长有：";
+            div.innerText +=s;
+            var password = document.stu.password;
+/*
+            div.innerText += " 密码："+password.value;
+*/
+            var letter = document.stu.Letter;
+            div.innerText += " 个人介绍："+letter.value;
+        }
+    </script>
+</head>
+<body>
+<h3 align="center">学生信息注册</h3>
+<form name="stu" action="">
+
+    <table>
+
+        <tr><td>姓名：</td><td><input type="text" id="name" name="userName"></td></tr>
+
+        <tr>
+            <td>性别：</td>
+            <td><input type="radio" name="stuSex" id="sex" value="男" checked="checked">男
+                <input type="radio" name="stuSex" value="女">女
+            </td>
+        </tr>
+        <tr><td>出生日期</td>
+            <td><input type="text" name="stuBirthday" id="stuBirthday"></td>
+            <td>按格式yyyy-mm-dd</td>
+        </tr>
+        <tr><td>学校：</td><td><input type="text" name="stuSchool" id="stuSchool"></td></tr>
+        <tr><td>专业：</td>
+            <td><select name="stuSelect2">
+                <option selected value="计算机科学与技术">计算机科学与技术</option>
+                <option value="网络工程">网络工程</option>
+                <option value="物联网工程">物联网工程</option>
+                <option value="应用数学">应用数学</option>
+            </select>
+            </td>
+        </tr>
+        <tr><td>体育特长：</td>
+            <td colspan="2">
+                <input type="checkbox" name="stuCheck" value="篮球">篮球
+                <input type="checkbox" name="stuCheck" value="排球">排球
+                <input type="checkbox" name="stuCheck" value="足球">足球
+                <input type="checkbox" name="stuCheck" value="游泳">游泳
+        </tr>
+        <tr><td>上传照片：</td><td colspan="2"><input type="file"></td></tr>
+        <tr><td>密码：</td><td><input type="password" name="stuPwd"></td></tr>
+        <tr><td>个人介绍：</td>
+            <td colspan="2"><textarea name="Letter" rows="4" cols="40"></textarea></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="提交" onclick="validate()"></td><td><input type="reset" value="取消"></td>
+        </tr>
+
+    </table>
+
+</form>
+<div id="div">
+
+</div>
+<input type="button" value="显示" onclick="display()">
+</body>
+</html>
