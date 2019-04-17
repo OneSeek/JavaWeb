@@ -21,4 +21,14 @@
         <servlet-name>LoginCheckServlet</servlet-name>
         <servlet-class>servletLearn.LoginCheckServlet</servlet-class>
     </servlet>
+
+
+    <servlet>
+        <servlet-name>SetStudent</servlet-name>
+        <servlet-class>servletLearn.SetStudent</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SetStudent</servlet-name>
+        <url-pattern>/SetStudent</url-pattern>
+    </servlet-mapping>
 </web-app>
