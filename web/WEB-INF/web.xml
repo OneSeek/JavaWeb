@@ -31,4 +31,13 @@
         <servlet-name>SetStudent</servlet-name>
         <url-pattern>/SetStudent</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FromCheck</servlet-name>
+        <servlet-class>servletLearn.FromCheck</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FromCheck</servlet-name>
+        <url-pattern>/servletLearn.FromCheck</url-pattern>
+    </servlet-mapping>
 </web-app>
