@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "SetStudent")
+@WebServlet(name = "SetStudent", urlPatterns = {"/SetStudent"})
 public class SetStudent extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

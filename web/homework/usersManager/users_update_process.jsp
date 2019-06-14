@@ -16,8 +16,9 @@
     String userId = request.getParameter("user_id");
     String userName = request.getParameter("user_name");
     String userSex = request.getParameter("user_sex");
+    String userAge = request.getParameter("user_age");
 
-    User user = new User(userId,userName,userSex);
+    User user = new User(userId,userName,userSex,userAge);
     UserDao userDao = new UserDao();
 
     try {

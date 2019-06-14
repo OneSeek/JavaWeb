@@ -11,11 +11,12 @@
     <title>Title</title>
 </head>
 <body>
-<form name="form1" action="books_add_process.jsp" method="post" >
+<form name="form1" action="../UserManagerAdd" method="post" >
     <table>
-        <tr><td>书号</td><td><input type="text" name="book_no"></td></tr>
-        <tr><td>书名</td><td><input type="text" name="book_name"></td></tr>
-        <tr><td>本数</td><td><input type="text" name="book_number"></td></tr>
+        <tr><td>用户Id</td><td><input type="text" name="user_id"></td></tr>
+        <tr><td>用户名</td><td><input type="text" name="user_name"></td></tr>
+        <tr><td>性别</td><td><input type="text" name="user_sex"></td></tr>
+        <tr><td>年龄</td><td><input type="text" name="user_age"></td></tr>
 
         <tr><td colspan="2">
             <input type="submit" value="提交">

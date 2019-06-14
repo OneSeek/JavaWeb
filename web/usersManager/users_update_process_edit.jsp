@@ -16,7 +16,7 @@
     UserDao userDao = new UserDao();
     User user = userDao.findUserById(request.getParameter("user_id"));
 %>
-<form action="users_update_process.jsp" method="post">
+<form action="../UserManagerUpdate" method="post">
     <tr><td>用户ID</td><td><input type="text" name="user_id" value=<%=user.getUserId()%>></td></tr>
     <tr><td>用户名</td><td><input type="text" name="user_name" value=<%=user.getUserName()%>></td></tr>
     <tr><td>用户性别</td><td><input type="text" name="user_sex" value=<%=user.getUserSex()%>></td></tr>

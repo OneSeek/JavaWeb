@@ -7,28 +7,26 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Map;
 
-@WebServlet(name = "FormCheck", value = {"/FormCheck"})
-public class FormCheck extends HttpServlet {
+@WebServlet(name = "List",value = {"/List"})
+public class List extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Map<String,String> pm=new HashMap<String,String>();
+        pm.put("山东","济南,青岛,泰安,潍坊,烟台,聊城,枣庄,菏泽,莱芜,临沂");
+        pm.put("江苏","南京,苏州,无锡,徐州,南通,连云港,镇江,常州,淮安,扬州");
+        pm.put("广东","广州,深圳,珠海,汕头,佛山,东莞,湛江,江门,中山,惠州");
+
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
+
         request.setCharacterEncoding("UTF-8");
-        String userId=request.getParameter("userId");
-        if(!"张三".equals(userId)){
-            out.print("用户名不存在");
-        }else{
-            String userPwd=request.getParameter("userPwd");
-            if(!"".equals("userPwd")){
-                if("123".equals(userPwd))
-                    out.print("欢迎您");
-                else
-                    out.print("密码错误");
-            }
-        }
+        PrintWriter out = response.getWriter();
+        String s1 = request.getParameter("proc");
+        out.print(pm.get(s1));
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request,response);
+
     }
 }

@@ -7,18 +7,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "LoginCheckServlet", value = "/LoginCheckServlet")
-public class LoginCheckServlet extends HttpServlet {
+@WebServlet(name = "Register",urlPatterns = {"/Register"})
+public class Register extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String userName = request.getParameter("username");
-        String userPwd = request.getParameter("userpwd");
-        String info;
-        if("abc".equals(userName)&&"123".equals(userPwd)){
-            info = "欢迎你"+userName+"!";
-        }else {
-            info = "用户名或密码不正确！";
-        }
-        request.setAttribute("outputMessage",info);
+        request.setCharacterEncoding("UTF-8");
+        String name =request.getParameter("name");
+        String sex = request.getParameter("sex");
+        String birthday =request.getParameter("birthday");
+        String nation = request.getParameter("nation");
+        String info = request.getParameter("info");
+
+        String massage = name + " " + sex + " " + birthday + " " + nation + " " + info ;
+        request.setAttribute("outputMessage",massage);
         request.getRequestDispatcher("homework/ServletLearn/info.jsp").forward(request,response);
 
     }

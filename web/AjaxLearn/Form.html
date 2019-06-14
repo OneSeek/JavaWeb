@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" http-equiv="content-type" content="text/html" >
-    <script type="text/javascript" src="js/ajax.js"></script>
-    <script type="text/javascript">
-        function formcheck() {
-            var url = "formcheck"
-            var params="userid="+userid.value+"&userpwd="+userpwd.value;
-            sendResques(url,params,'POST',showresult);
+    <script src="../js/ajax.js"></script>
+    <script>
+        function formCheck() {
+            var userId=document.getElementById("userId");
+            var userPwd=document.getElementById("userPwd");
+            var url = "../FormCheck";
+            var params="userId="+userId.value+"&userPwd="+userPwd.value;
+            sendRequest(url,params,'POST',showResult);
         }
-        function showresult() {
-            if (httpRequest.readyState == 4){
-                if(httpRequest.status == 200){
-                    var info = httpRequest.respondText;
+        function showResult() {
+            var result = document.getElementById("result");
+            if (xmlHttpRequest.readyState == 4){
+                if(xmlHttpRequest.status == 200){
+                    var info = xmlHttpRequest.responseText;
                     result.innerHTML = info;
                 }
             }
@@ -22,9 +25,9 @@
     <title>表单验证</title>
 </head>
 <body>
-    请输入用户名：<input type="text" name="userid" onblur="formcheck()"/><br/>
-    请输入密码：<input type="password" name="userpwd"/><br/>
-    <input type="button" value="登陆" onclick="userpwd"/><br/>
+    请输入用户名：<input type="text" id="userId" name="userId" onblur="formCheck()"/><br/>
+    请输入密码：<input type="password" id="userPwd" name="userPwd"/><br/>
+    <input type="button" value="登陆" onclick="formCheck()"/><br/>
     <div id="result"></div>
 </body>
 </html>

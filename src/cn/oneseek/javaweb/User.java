@@ -1,12 +1,13 @@
 package cn.oneseek.javaweb;
 
 public class User {
-    private String userId,userName,userSex;
+    private String userId,userName,userSex,userAge;
     public User(){}
-    public User(String userId,String userName,String userSex){
+    public User(String userId,String userName,String userSex,String userAge){
         this.userId = userId;
         this.userName = userName;
         this.userSex = userSex;
+        this.userAge = userAge;
     }
 
     public String getUserId(){
@@ -28,4 +29,11 @@ public class User {
         this.userSex=userSex;
     }
 
+    public String getUserAge() {
+        return userAge;
+    }
+
+    public void setUserAge(String userAge) {
+        this.userAge = userAge;
+    }
 }

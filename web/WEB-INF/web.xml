@@ -3,41 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-    <servlet>
-        <servlet-name>HelloWorld</servlet-name>
-        <servlet-class>servletLearn.HelloWorld</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>HelloWorld</servlet-name>
-        <url-pattern>/HelloWorld</url-pattern>
-    </servlet-mapping>
 
 
-    <servlet-mapping>
-        <servlet-name>LoginCheckServlet</servlet-name>
-        <url-pattern>/LoginCheckServlet</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>LoginCheckServlet</servlet-name>
-        <servlet-class>servletLearn.LoginCheckServlet</servlet-class>
-    </servlet>
 
-
-    <servlet>
-        <servlet-name>SetStudent</servlet-name>
-        <servlet-class>servletLearn.SetStudent</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SetStudent</servlet-name>
-        <url-pattern>/SetStudent</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>FromCheck</servlet-name>
-        <servlet-class>servletLearn.FromCheck</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>FromCheck</servlet-name>
-        <url-pattern>/servletLearn.FromCheck</url-pattern>
-    </servlet-mapping>
 </web-app>

@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<form name="form1" action="users_select_process.jsp" method="post">
+<form name="form1" action="../UserManagerSelect" method="post">
     用户ID：<input type="text" name="user_id"><br/>
     用户名：<input type="text" name="user_name"><br/>
     用户性别：<input type="text" name="user_sex"><br/>
